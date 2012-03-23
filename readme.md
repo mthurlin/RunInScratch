@@ -9,8 +9,8 @@ Why?
 I'm surprised not to have found something like this already out there, which leads me to think that I may be alone in my dislike of results of scripts being displayed in the console, so here are my reasons:
 
 - Same colour scheme as the rest of the program.
-- It seems more efficient to have the results to the side of the script, as shape of monitors generally means there is more space available for another view column than there is for another view row.
-- I prefer being able to detach the results view and move it to a differet monitor.
+- It seems more efficient to have the results to the side of the script, as the shape of monitors generally means there is more space available for another view column than there is for another view row.
+- I prefer being able to detach the results view and move it to a different monitor.
 
 Notes
 -----
@@ -21,3 +21,5 @@ The command will check what syntax the current buffer is, and run a command on t
 - Applescript
 
 These are all run without arguments. To add arguments or use any other interpreter, add a shebang line to the top of the file.
+
+Before running the file, the command will cd into its base directory.
