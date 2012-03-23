@@ -2,7 +2,9 @@ Run in Scratch
 ==============
 A simple plugin to run the current buffer, and output its results to another view in Sublime Text 2, instead of the console. The results view will be associated with the original buffer, so any subsequent running of Run in Scratch will output to this view. The first time it is run, a new view is created on the right in column mode (currently it assumes you are working with one view per window).
 
-![example](https://github.com/ryecroft/RunInScratch/blob/master/example.jpg)
+![example](http://github.com/ryecroft/RunInScratch/example.jpg)
+<!-- ![Soda Light Theme](http://buymeasoda.github.com/soda-theme/images/screenshots/soda-light-theme.png?v=7)
+![Soda Light Theme](http://ryecroft.github.com/RunInScratch/images/screenshots/soda-light-theme.png?v=7) -->
 
 Why?
 ----
