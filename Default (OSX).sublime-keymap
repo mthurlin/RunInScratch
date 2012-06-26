@@ -1,0 +1,5 @@
+[
+
+	{ "keys": ["super+r"], "command": "run_in_scratch" }
+
+]

@@ -1,0 +1,8 @@
+// This is not in use yet.
+{
+	"run_commands":{
+			"applescript":"osascript",
+			"python":"python",
+			"ruby":"ruby"
+		}
+}

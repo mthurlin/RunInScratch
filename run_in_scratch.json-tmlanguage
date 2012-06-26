@@ -1,0 +1,65 @@
+{ "name": "run_in_scratch",
+  "scopeName": "source.run_in_scratch",
+  "fileTypes": [""],
+  "patterns": [
+    { "match": "(^.+\\.rb:\\d+:[^\\n]+\\(.+Error\\))",
+      "name": "error.run_in_scratch",
+      "captures": {
+            "1": { "name": "constant.character.escape.run_in_scratch" }
+         },
+      "comment": "This comment is optional."
+    },
+    { "match": "(^  .+)",
+      "name": "error.run_in_scratch",
+      "captures": {
+            "1": { "name": "constant.character.escape.run_in_scratch" }
+         },
+      "comment": "This comment is optional."
+    },
+    { "match": "(^.+\\.rb: )(line: \\d+)",
+      "name": "string.run_in_scratch",
+      "captures": {
+            "1": { "name": "string.run_in_scratch" },
+            "2": { "name": "string.run_in_scratch" }
+         },
+      "comment": "This comment is optional."
+    },
+    { "match": "((?:\"[^\"]+\")|(?::[a-zA-Z]+))",
+      "name": "string.run_in_scratch",
+      "captures": {
+            "1": { "name": "string.run_in_scratch" }
+            },
+      "comment": "This comment is optional."
+    },
+    { "match": "(true|false)",
+      "name": "bool.run_in_scratch",
+      "captures": {
+            "1": { "name": "constant.numeric.run_in_scratch" }
+         },
+      "comment": "This comment is optional."
+    },
+    { "match": "(\\d+)",
+      "name": "numeric.run_in_scratch",
+      "captures": {
+            "1": { "name": "constant.numeric.run_in_scratch" }
+         },
+      "comment": "This comment is optional."
+    },
+    {"match": "(^TODO:)(.+)",
+     "name": "todo.run_in_scratch",
+     "captures": {
+           "1": { "name": "entity.other.attribute-name.escape.sequence.run_in_scratch" },
+           "2": { "name": "comment.run_in_scratch" }
+        },
+     "comment": "This comment is optional."
+    },
+    {"match": "(^LOG:.+)",
+     "name": "todo.run_in_scratch",
+     "captures": {
+           "1": { "name": "comment.run_in_scratch" }
+        },
+     "comment": "This comment is optional."
+    }
+  ],
+  "uuid": "f559265f-9e92-4de4-9d2c-448d739dfc4f"
+}

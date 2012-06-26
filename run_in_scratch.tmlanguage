@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>fileTypes</key>
+	<array>
+		<string></string>
+	</array>
+	<key>name</key>
+	<string>run_in_scratch</string>
+	<key>patterns</key>
+	<array>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>constant.character.escape.run_in_scratch</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>This comment is optional.</string>
+			<key>match</key>
+			<string>(^.+\.rb:\d+:[^\n]+\(.+Error\))</string>
+			<key>name</key>
+			<string>error.run_in_scratch</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>constant.character.escape.run_in_scratch</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>This comment is optional.</string>
+			<key>match</key>
+			<string>(^  .+)</string>
+			<key>name</key>
+			<string>error.run_in_scratch</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>string.run_in_scratch</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>string.run_in_scratch</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>This comment is optional.</string>
+			<key>match</key>
+			<string>(^.+\.rb: )(line: \d+)</string>
+			<key>name</key>
+			<string>string.run_in_scratch</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>string.run_in_scratch</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>This comment is optional.</string>
+			<key>match</key>
+			<string>((?:"[^"]+")|(?::[a-zA-Z]+))</string>
+			<key>name</key>
+			<string>string.run_in_scratch</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>constant.numeric.run_in_scratch</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>This comment is optional.</string>
+			<key>match</key>
+			<string>(true|false)</string>
+			<key>name</key>
+			<string>bool.run_in_scratch</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>constant.numeric.run_in_scratch</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>This comment is optional.</string>
+			<key>match</key>
+			<string>(\d+)</string>
+			<key>name</key>
+			<string>numeric.run_in_scratch</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>entity.other.attribute-name.escape.sequence.run_in_scratch</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>comment.run_in_scratch</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>This comment is optional.</string>
+			<key>match</key>
+			<string>(^TODO:)(.+)</string>
+			<key>name</key>
+			<string>todo.run_in_scratch</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>comment.run_in_scratch</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>This comment is optional.</string>
+			<key>match</key>
+			<string>(^LOG:.+)</string>
+			<key>name</key>
+			<string>todo.run_in_scratch</string>
+		</dict>
+	</array>
+	<key>scopeName</key>
+	<string>source.run_in_scratch</string>
+	<key>uuid</key>
+	<string>f559265f-9e92-4de4-9d2c-448d739dfc4f</string>
+</dict>
+</plist>
