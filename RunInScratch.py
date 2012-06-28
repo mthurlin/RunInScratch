@@ -9,6 +9,7 @@ class RunInScratchCommand(sublime_plugin.TextCommand):
 		execute_string = self.get_execute_string(syntax, line1)
 		current_file = self.view.file_name()
 		self.current_file = current_file
+		# self.view.settings().set('parent_file')
 		
 		window = sublime.active_window()
 
@@ -84,6 +85,7 @@ class RunInScratchCommand(sublime_plugin.TextCommand):
 		
 		
 		view.set_name('Results of %s' % (self.tab_name))
+		view.settings().set("RunInScratch", True)
 		
 		
 		window.run_command("move_to_group", {"group": 1})
@@ -91,3 +93,27 @@ class RunInScratchCommand(sublime_plugin.TextCommand):
 		view.set_scratch(True)
 		
 		return view
+		
+		
+class GoToLineListener(sublime_plugin.EventListener):
+
+	def get_parent_view(self, file_name):
+		for window in sublime.windows():
+			for view in window.views():
+				name = view.file_name()
+				match = re.search(file_name, str(name))
+				if match:
+					return view
+
+	def on_selection_modified(self, view):
+		if view.settings().get("RunInScratch") == True:
+			text = view.substr(view.line(view.sel()[0]))
+			match = re.search(r'^.+ from (.+\.rb):(\d+):in', text)
+			if match:
+				parent_view = self.get_parent_view(match.group(1))
+				parent_view.sel().clear()
+				parent_view.run_command("goto_line", {"line":int(match.group(2))})
+				parent_view.sel().add(parent_view.line(parent_view.sel()[0]))
+
+
+				
