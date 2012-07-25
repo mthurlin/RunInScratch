@@ -72,7 +72,7 @@ class RunInScratchCommand(sublime_plugin.TextCommand):
 
 		window = sublime.active_window()
 		view = window.new_file()
-		view.set_syntax_file('/Users/fatboy/Library/Application Support/Sublime Text 2/Packages/RunInScratch/run_in_scratch.tmlanguage')
+		#view.set_syntax_file('/Users/fatboy/Library/Application Support/Sublime Text 2/Packages/RunInScratch/run_in_scratch.tmlanguage')
 		view.settings().set('parent_file', self.current_file)
 		view.settings().set('word_wrap', True)
 		window.run_command("set_layout",
