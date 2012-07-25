@@ -47,11 +47,12 @@ class RunInScratchCommand(sublime_plugin.TextCommand):
 		view.end_edit(edit)
 		
 	def get_execute_arg(self, syntax, line1):
+		syntax = syntax.split("/")[-1].split(".")[0].lower()
 		return {
 			'applescript':' -e',
 			'python':' -c',
 			'ruby':' -e'
-		}[syntax]
+		}.get(syntax, "-c")
 		
 	def get_execute_string(self, syntax, line1):
 		if re.match("#!", line1):
@@ -62,7 +63,7 @@ class RunInScratchCommand(sublime_plugin.TextCommand):
 			'applescript':'osascript',
 			'python':'python',
 			'ruby':'ruby'
-		}[syntax]
+		}.get(syntax, "python")
 		
 	def get_results_window(self):
 		for window in sublime.windows():
