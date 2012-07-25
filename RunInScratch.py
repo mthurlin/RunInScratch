@@ -17,7 +17,7 @@ class RunInScratchCommand(sublime_plugin.TextCommand):
 			current_file = "None" + line1
 			file_name = self.view.substr(sublime.Region(0,self.view.size()))
 			tab_name = "untitled"
-			execute_string += get_execute_arg(syntax, line1)
+			execute_string += self.get_execute_arg(syntax, line1)
 			file_directory = ""
 		else:
 			file_name = current_file.split("/")[-1]
